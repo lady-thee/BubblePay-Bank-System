@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-fu@e7x50fd3kmk2a+l#%6ai(1gifb4031(af@_iyhojr@9oh8r'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -89,14 +89,22 @@ DATABASES = {
     #     'NAME': BASE_DIR / 'db.sqlite3',
     # }
     
+    # 'default': {
+    #     'DATABASE_URL': 'postgresql://postgres:ixEk41BP1NK1UPlXUcVX@containers-us-west-80.railway.app:7789/railway',
+    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #     'NAME': 'railway',
+    #     'USER': 'postgres',
+    #     'HOST': 'containers-us-west-80.railway.app',
+    #     'PASSWORD': 'ixEk41BP1NK1UPlXUcVX',
+    #     'PORT': '7789'
+    # }
     'default': {
-        'DATABASE_URL': 'postgresql://postgres:ixEk41BP1NK1UPlXUcVX@containers-us-west-80.railway.app:7789/railway',
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'railway',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'bank_sys_db',
         'USER': 'postgres',
-        'HOST': 'containers-us-west-80.railway.app',
-        'PASSWORD': 'ixEk41BP1NK1UPlXUcVX',
-        'PORT': '7789'
+        'HOST': 'localhost',
+        'PASSWORD': '2030',
+        'PORT': '5432'
     }
 }
 
@@ -144,7 +152,7 @@ STATIC_URL = 'static/'
 
 COMPRESS_ROOT = BASE_DIR / 'static'
 
-COMPRESS_ENABLED = True
+COMPRESS_ENABLED = False
 
 STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
 
