@@ -60,7 +60,7 @@ MIDDLEWARE = [
 ]
 
 
-CSRF_TRUSTED_ORIGINS = ['example.com']
+CSRF_TRUSTED_ORIGINS = ['*']
 
 
 ROOT_URLCONF = 'banking_sys.urls'
