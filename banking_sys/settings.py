@@ -89,23 +89,23 @@ DATABASES = {
     #     'NAME': BASE_DIR / 'db.sqlite3',
     # }
     
-    # 'default': {
-    #     'DATABASE_URL': 'postgresql://postgres:ixEk41BP1NK1UPlXUcVX@containers-us-west-80.railway.app:7789/railway',
-    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    #     'NAME': 'railway',
-    #     'USER': 'postgres',
-    #     'HOST': 'containers-us-west-80.railway.app',
-    #     'PASSWORD': 'ixEk41BP1NK1UPlXUcVX',
-    #     'PORT': '7789'
-    # }
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'bank_sys_db',
+        'DATABASE_URL': 'postgresql://postgres:ixEk41BP1NK1UPlXUcVX@containers-us-west-80.railway.app:7789/railway',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'railway',
         'USER': 'postgres',
-        'HOST': 'localhost',
-        'PASSWORD': '2030',
-        'PORT': '5432'
+        'HOST': 'containers-us-west-80.railway.app',
+        'PASSWORD': 'ixEk41BP1NK1UPlXUcVX',
+        'PORT': '7789'
     }
+    #  'default': {
+    #    'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'bank_sys_db',
+    #     'USER': 'postgres',
+    #     'HOST': 'localhost',
+    #     'PASSWORD': '2030',
+    #     'PORT': '5432'
+    # }
 }
 
 
