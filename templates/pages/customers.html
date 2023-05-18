@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<main>
+{% for message in messages %}
+    <div class="max-w-[500px] p-4 text-center mx-auto bg-[#0d0d4f] text-white">{{ message }}</div>
+{% endfor %}
+<div class="relative mx-32 mt-20 mb-36 overflow-x-auto shadow-md sm:rounded-lg">
+   
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3 text-[#0d0d4f]">
+                    Customer(s) 
+                </th>
+                <th scope="col" class="px-6 py-3 text-[#0d0d4f]">
+                    Date of Birth
+                </th>
+                <th scope="col" class="px-6 py-3 text-[#0d0d4f]">
+                    Email
+                </th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            {% for customer in customers %}
+            <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-[#0d0d4f] whitespace-nowrap dark:text-white">
+                    {{ customer.fullname }}
+                </th>
+                <td class="px-6 py-4 text-[#0d0d4f]">
+                    {{ customer.birthday }}
+                </td>
+                <td class="px-6 py-4 text-[#0d0d4f]">
+                    {{ customer.user.email }}
+                </td>
+                <td class="px-6 py-4">
+                    <a href="{% url 'view customer' customer.id %}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">view</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</main>
+
+{% endblock %}

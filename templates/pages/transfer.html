@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <main class="mb-32">
+        <div class="w-full mx-auto mt-20 max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+            <form class="space-y-6" action="{% url 'transfer' %}" method="post">
+                {% csrf_token %}
+                <h5 class="text-xl font-medium text-[#0d0d4f] dark:text-white">Transfer</h5>
+                <div>           
+                    <label for="user_multiple" class="block mb-2 text-sm font-medium text-[#0d0d4f] dark:text-white">Select who to transfer to</label>
+                    <select multiple name="select" id="user_multiple" class="bg-gray-50 border border-gray-300 text-[#0d0d4f] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option selected>~</option>
+                        {% for customer in customers %}
+                        <option value="{{ customer.id }}">{{ customer.fullname }}</option>
+                        {% endfor %}
+                    </select>
+
+                </div>
+                <div>
+                    <label for="amount" class="block mb-2 text-sm font-medium text-[#0d0d4f] dark:text-white">Amount</label>
+                    <input type="number"  id="amount" placeholder="0.00" name="amount" multiple  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                </div>
+                
+                <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">transfer</button>
+                
+            </form>
+        </div>
+        
+    </main>
+
+
+{% endblock %}

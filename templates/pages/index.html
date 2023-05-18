@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <main>
+        <section class="max-md:max-w-screen-sm mt-10 mx-auto flex-row flex items-center justify-around max-sm: max-md:justify-between">
+            <div class="w-[40%] max-sm:mr-60  max-sm:text-center max-sm:w-[500px] max-sm:mx-auto">
+                <h1 class="mb-6 text-6xl text-justify  w-[400px] font-semibold text-[#0d0d4f]  dark:text-white max-md:text-3xl max-md:text-left max-md:w-[200px] max-sm:text-center max-sm:w-[450px] max-sm:mx-auto max-sm:text-4xl">Banking made effortless. Anytime, Anywhere!</h1>
+                <p class="mb-6 text-sm text-justify  w-[400px] font-semibold text-[#0d0d4f] dark:text-white max-md:text-xl max-md:text-justify max-md:w-[250px] max-sm:w-[500px] max-sm:mx-auto max-sm:text-center">Experience the ease of bank transactions, make transfers, send any amount of money and receive alerts with BubblePay</p>
+                <div class="py-4 w-[250px] max-sm:mx-auto">
+                    <a href="{% url 'customers' %}" class="p-2 text-white  bg-[#0d0d4f] border hover:bg-[#85adf8] hover:text-[#0d0d4f]">view all customers</a>
+                </div>
+            </div>
+            <div class=" w-[30%] mt-14 max-sm:hidden max-md:ml-56">
+                <img src="{% static 'images/credit_card2.png' %}" class="rotate-[40deg] mr-5 w-[80%]" alt="credit card">
+                <img src="{% static 'images/credit_card1.png' %}" class="rotate-[-10deg] mr-3 w-[80%]" alt="credit card">
+            </div>
+        </section>
+
+
+        <!-- Second layer of main -->
+
+        <div class="w-full bg-[#85adf8] flex gap-2 justify-around p-2 mt-24 max-sm:gap-0 max-sm:py-2 max-sm:px-0 max-sm:p-0">
+           <img src="{% static 'images/visa.png' %}" class="h-10 mr-3 w-32 max-sm:w-20" alt="">
+           <img src="{% static 'images/mastercard.png' %}" class="h-10 mr-3 w-32 max-sm:w-20" alt="">
+           <img src="{% static 'images/paypal.png' %}" class="h-10 mr-3 w-32 max-sm:w-20" alt="">
+           <img src="{% static 'images/western.webp' %}" class="h-10 mr-3 w-32 max-sm:w-20" alt="">
+
+        </div>
+
+
+        <!-- third layer of main -->
+
+        <section class=" max-md:max-w-screen-sm mt-20 mx-auto">
+            <div class="w-[550px] mx-auto">
+                <h5 class="mb-6 text-3xl text-center font-semibold text-[#0d0d4f] capitalize dark:text-white max-sm:text-[1rem]">effortless banking features you can get at BubblePay</h5>
+                <p class="mb-6 text-[15px] text-center font-semibold text-[#0d0d4f] capitalize dark:text-white max-sm:text-xs max-sm:w-[300px] max-sm:mx-auto">BubblePay offers customers consistent and reliable services to meet their services</p>
+            </div>
+        </section>
+
+        <!-- fourth layer of main -->
+
+        <section class="py-24 w-full max-sm:flex-col max-md:max-w-screen-sm mt-24 mx-auto flex justify-around">
+            <div class=" max-sm:w-[400px] max-sm:mx-6 flex flex-col p-6 capitalize bg-[#0d0d4f] items-center border rounded-lg shadow md:flex-row md:max-w-xl dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                <div class="flex  flex-col justify-between p-4 leading-normal">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">manage your finances with ease</h5>
+                    <p class="mb-3 font-normal text-white dark:text-gray-400">Check your account balances and review transaction history effortlessly and enjoy hassle-free access to statements and important documents</p>
+                </div>
+                <img class="object-cover w-full rounded-t-lg h-96 sm:h-10 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="{% static 'images/money-growth-1.png' %}" alt="">
+            </div>  
+            
+            <div class="w-full max-w-sm  bg-white border-t-0 border-l-0 border-r border-b border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+              
+                <div class="flex flex-col items-center pb-10">
+                    <img class="w-24 h-24 mb-3" src="{% static 'images/money-transfer-1.png' %}" alt=""/>
+                    <h5 class="mb-1 text-xl text-center font-semibold text-[#0d0d4f] capitalize dark:text-white max-sm:text-[1rem]">seamless fund transfer</h5>
+                    <p class="mb-3 font-normal  text-[15px] text-center  text-[#0d0d4f] dark:text-gray-400">send funds to family, friends or business associates instantly</p>
+                    
+                </div>
+            </div>           
+        </section>
+
+       
+        <!-- fifth layer of main -->
+
+        <section class="py-10 w-full max-sm:flex-col max-md:max-w-screen-sm mt-20 mx-auto flex justify-around"> 
+            
+            <div class="w-full max-w-sm  bg-white border-t-0 border-l-0 border-r border-b border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+              
+                <div class="flex flex-col items-center pb-10">
+                    <img class="w-24 h-24 mb-3" src="{% static 'images/customer-support-2.png' %}" alt=""/>
+                    <h5 class="mb-1 text-xl text-center font-semibold text-[#0d0d4f] capitalize dark:text-white max-sm:text-[1rem]">24/7 customer support</h5>
+                    <p class="mb-3 font-normal  text-[15px] text-center  text-[#0d0d4f] dark:text-gray-400">Get assistance with account related inquiries or issues</p>
+                    
+                </div>
+            </div>
+
+            <div class=" max-sm:w-[400px] max-sm:mx-6 flex flex-col p-6 capitalize bg-[#0d0d4f] items-center border rounded-lg shadow md:flex-row md:max-w-xl dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                <div class="flex  flex-col justify-between p-4 leading-normal">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">manage your cards with confidence</h5>
+                    <!-- <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">BubblePay gives free instant debit card to new customers</h5> -->
+                    <!-- <p class="mb-3 font-normal text-white dark:text-gray-400">Get new, instant debit and credit cards within minutes of creating account</p> -->
+                    <p class="mb-3 font-normal text-white dark:text-gray-400">Activate or block your cards instantly to ensure security and monitor card transactions, view transactions and set spending limits</p>
+                </div>
+                <img class="object-cover w-full rounded-t-lg h-96 sm:h-10 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="{% static 'images/money-growth-1.png' %}" alt="">
+            </div>             
+        </section>
+
+        <!-- sixth layer of main -->
+
+        <section class="py-24 w-full max-sm:flex-col max-md:max-w-screen-sm mt-24 mx-auto flex justify-around">
+            <div class=" max-sm:w-[400px] max-sm:mx-6 flex flex-col p-6 capitalize items-center md:flex-row md:max-w-xl dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                <div class="flex w-[500px] flex-col justify-between p-4 leading-normal">
+                    <h5 class="mb-2 text-4xl font-bold tracking-tight text-[#0d0d4f] dark:text-white">BubblePay gives free instant debit card to new customers</h5>
+                    <p class="mb-3 font-normal text-[#0d0d4f] dark:text-gray-400">Check your account balances and review transaction history effortlessly and enjoy hassle-free access to statements and important documents. Get new, instant debit and credit cards within minutes of creating account</p>
+                </div>
+            </div>  
+            
+            <img class="w-[600px] mb-3" src="{% static 'images/Group-9.png' %}" alt=""/>
+        </section>
+
+
+        
+    </main>
+{% endblock %}
