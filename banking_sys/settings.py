@@ -59,6 +59,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+
+CSRF_TRUSTED_ORIGINS = ['example.com']
+
+
 ROOT_URLCONF = 'banking_sys.urls'
 
 TEMPLATES = [
