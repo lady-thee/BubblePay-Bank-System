@@ -57,6 +57,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django.middleware.cache.UpdateCacheMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.cache.FetchFromCacheMiddleware",
 ]
 
 
@@ -169,6 +172,19 @@ COMPRESS_JS_FILTERS = ["compressor.filters.jsmin.JSMinFilter"]
 
 STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
 
+
+CACHES = {
+    "default": {
+        "BACKEND": "django.core.cache.backends.memcached.PyMemcacheCache",
+        "LOCATION": "127.0.0.1:11211",
+        "OPTIONS": {
+            "no_delay": True,
+            "ignore_exc": True,
+            "max_pool_size": 4,
+            "use_pooling": True,
+        },
+    }
+}
 
 
 # Default primary key field type
