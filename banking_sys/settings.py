@@ -60,7 +60,7 @@ MIDDLEWARE = [
 ]
 
 
-CSRF_TRUSTED_ORIGINS = ['*']
+CSRF_TRUSTED_ORIGINS = ['https://bubblepay-bank-system-production.up.railway.app/']
 
 
 ROOT_URLCONF = 'banking_sys.urls'
