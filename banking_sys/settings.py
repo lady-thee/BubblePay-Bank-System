@@ -165,8 +165,6 @@ COMPRESS_ROOT = BASE_DIR / 'static'
 
 COMPRESS_ENABLED = True
 
-COMPRESS_CSS_FILTERS = ["compressor.filters.cssmin.CSSMinFilter"]
-COMPRESS_JS_FILTERS = ["compressor.filters.jsmin.JSMinFilter"]
 
 STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
 
