@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-fu@e7x50fd3kmk2a+l#%6ai(1gifb4031(af@_iyhojr@9oh8r'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -173,18 +173,6 @@ COMPRESS_JS_FILTERS = ["compressor.filters.jsmin.JSMinFilter"]
 STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
 
 
-CACHES = {
-    "default": {
-        "BACKEND": "django.core.cache.backends.memcached.PyMemcacheCache",
-        "LOCATION": "127.0.0.1:11211",
-        "OPTIONS": {
-            "no_delay": True,
-            "ignore_exc": True,
-            "max_pool_size": 4,
-            "use_pooling": True,
-        },
-    }
-}
 
 
 # Default primary key field type
